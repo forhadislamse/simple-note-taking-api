@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "eefa0309-19cc-4da8-82ad-fe63549939e3",
+		"name": "simple-note-taking-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34968572"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "create register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Forhad34\",\r\n  \"email\": \"forhad1234@example.com\",\r\n  \"password\": \"forhad1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Auth",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"forhad1234@example.com\",\r\n  \"password\": \"forhad1234\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "create notes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBZG1pbi0wMDAxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUyOTkwMDQ0LCJleHAiOjE3NTM4NTQwNDR9.7U500fUTLYmU8EX7_YI63f44AeSJoe1rc6RiXvOeBo8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"My first note\",\r\n  \"content\": \"This is a protected note.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/notes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"notes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all notes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODg5NmEzODQzN2IxZGI2YTc3NjQ3MjkiLCJlbWFpbCI6ImZvcmhhZDEyM0BleGFtcGxlLmNvbSIsImlhdCI6MTc1Mzg0ODQzMywiZXhwIjoxNzU2NDQwNDMzfQ.13CJ4bF3d9qJGd9Ne4s8JBkdiApcQqKa1JHE4mcuDgA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/notes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"notes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a specific note by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODg5NmEzODQzN2IxZGI2YTc3NjQ3MjkiLCJlbWFpbCI6ImZvcmhhZDEyM0BleGFtcGxlLmNvbSIsImlhdCI6MTc1Mzg0ODQzMywiZXhwIjoxNzU2NDQwNDMzfQ.13CJ4bF3d9qJGd9Ne4s8JBkdiApcQqKa1JHE4mcuDgA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/notes/68898bd9ea8c1534ca44ff2d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"notes",
+								"68898bd9ea8c1534ca44ff2d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update the note",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODg5NmEzODQzN2IxZGI2YTc3NjQ3MjkiLCJlbWFpbCI6ImZvcmhhZDEyM0BleGFtcGxlLmNvbSIsImlhdCI6MTc1Mzg0ODQzMywiZXhwIjoxNzU2NDQwNDMzfQ.13CJ4bF3d9qJGd9Ne4s8JBkdiApcQqKa1JHE4mcuDgA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Programming\",\r\n    \"content\":\"C++, Python\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/notes/68898bd9ea8c1534ca44ff2d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"notes",
+								"68898bd9ea8c1534ca44ff2d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a note",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODg5NmEzODQzN2IxZGI2YTc3NjQ3MjkiLCJlbWFpbCI6ImZvcmhhZDEyM0BleGFtcGxlLmNvbSIsImlhdCI6MTc1Mzg0ODQzMywiZXhwIjoxNzU2NDQwNDMzfQ.13CJ4bF3d9qJGd9Ne4s8JBkdiApcQqKa1JHE4mcuDgA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/notes/68898bd9ea8c1534ca44ff2d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"notes",
+								"68898bd9ea8c1534ca44ff2d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
