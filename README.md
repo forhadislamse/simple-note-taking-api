@@ -168,6 +168,7 @@ To automatically fix prettier issues, use:
 # Live Hosting Link
 
 - Live link: `https://simple-note-taking-api.vercel.app/`
+- postman documentation:`https://documenter.getpostman.com/view/34968572/2sB3B8rCft`
 
 ![POSTMAN COLLECTION](./simple-note-taking-api.postman_collection.json)
 
