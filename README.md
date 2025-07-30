@@ -167,7 +167,7 @@ To automatically fix prettier issues, use:
 
 # Live Hosting Link
 
-- Live link: ``
+- Live link: `https://simple-note-taking-api.vercel.app/`
 
 ![POSTMAN COLLECTION](./simple-note-taking-api.postman_collection.json)
 
