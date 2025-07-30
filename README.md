@@ -22,32 +22,6 @@ Below is the Entity Relationship (ER) Diagram for the system:
 
 ## **API Endpoints**
 
-### **Authentication**
-
-1. **Login**
-
-   - **POST** `/auth/login`
-   - **Body**:
-     `json
-     {
-    "id": "Admin-0001",
-    "password": "admin123"
-}
-     `
-   - **Response**:
-     ```json
-     {
-       "success": true,
-       "statusCode": 200,
-       "message": "User is logged in successfully!",
-       "data": {
-         "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBZG1pbi0wMDAxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzUyOTkwMDQ0LCJleHAiOjE3NTM4NTQwNDR9.7U500fUTLYmU8EX7_YI63f44AeSJoe1rc6RiXvOeBo8"
-       }
-     }
-     ```
-
----
-
 ### **User**
 
 1. **Create register User**
